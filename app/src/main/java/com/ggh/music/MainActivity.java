@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 music.setPath("http://192.168.8.16:8280/terminalsystem/readFile?filepath=audio/CD32397A7DE548C9A4C2BAA4B1FC76D6.mp3");
                 music.setTitle("夜空中最亮的星");
                 mPlayer.musicPlayer(music);
+
             }
         });
         Music music = new Music();
