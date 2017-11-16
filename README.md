@@ -5,6 +5,27 @@
 
 
 ## 使用方法
+### 1.根目录下的build.gradle添加
+```html
+    maven { url "https://jitpack.io"}
+```
+```html
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+            maven { url "https://jitpack.io"}
+    
+        }
+    }
+```
+
+### 2. 使用的model中添加
+
+```html
+    compile 'com.github.xmtggh:musicPlayer:1.0.0'
+```
+
 ### 初始化示例
 ```java
  mPlayer = new Player.Buidler()
