@@ -21,7 +21,7 @@
 ### 2. 使用的model中添加
 
 ```html
-    compile 'com.github.xmtggh:musicPlayer:1.0.0'
+    compile 'com.github.xmtggh:musicPlayer:1.0.1'
 ```
 
 ### 初始化示例
@@ -106,6 +106,26 @@
 
 获取当前播放进度
 
+#### mPlayer.setProgress(long progress)
+
+设置播放进度
+
+#### mPlayer.setVolume(int progress)
+
+设置播放音量大小，目前最大值为300 可根据需求动态调整
+
+#### mPlayer.randomModel()
+
+设置为随机播放
+
+#### mPlayer.sequenceModel()
+
+设置为顺序播放
+
+#### mPlayer.loopModel()
+
+设置为单曲循环
+
 ### 最后
 记得添加网络权限哦
 ```html
@@ -115,15 +135,18 @@
 
 ### 版本信息
 
-1.0.1（预计12月）
+1.0.2（尚未规划（解决bug为主））
+1.0.1（已完成2017.12.14）
 1.0.0（已完成2017.11.16）
 
 ### 版本内容
 #### 1.0.0
 初次提交，播放器可设置在service或者activity中运行，具有播放，暂停，上一首，下一首，开始，重置，获取播放进度等功能
 
-#### 1.0.1(尚未完成)
-添加可拖动api 设置音量，添加播放模式（随机，顺序，单曲播放等）
+#### 1.0.1
+添加可拖动进度api 设置音量大小，添加播放模式（随机，顺序，单曲播放等）
 
+#### 1.0.2
+尚未完成
 ### 闭幕
 欢迎大家来fork和点赞，若是有bug请随意提起，欢迎各种商用或者demo，免费纯净版
