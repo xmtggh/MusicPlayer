@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,5 +43,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="single" />
+        <SeekBar
+            android:id="@+id/seek_pro"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/seek_voice"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一首" />
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一首" />
+        <Button
+            android:id="@+id/random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="随机播放" />
+        <Button
+            android:id="@+id/sequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="顺序播放" />
+        <Button
+            android:id="@+id/singelmodel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单曲循环" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

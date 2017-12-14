@@ -25,6 +25,7 @@ public class Player {
     private LibVLC libvlc;
     private Context mCtx;
     private boolean isAutoPlay = false;
+    public static final int MAXVOLUME = 300;
 
     /**
      * 音乐播放列表
@@ -96,6 +97,7 @@ public class Player {
         Media m = new Media(libvlc, Uri.parse(currentMusic.getPath()));
         mMediaPlayer.setMedia(m);
         mMediaPlayer.play();
+        playList.setCurrentMusic(currentMusic);
         updatePlayerState(Constant.STATE_PLAYING);
 
     }
@@ -181,6 +183,7 @@ public class Player {
         }
     }
 
+
     /**
      * 获取当前播放时间
      *
@@ -204,6 +207,78 @@ public class Player {
             return mMediaPlayer.getLength();
         } else {
             return -1L;
+        }
+    }
+
+    /**
+     * 1.0.1 更新的api
+     */
+
+    /**
+     * 设置进度条进度
+     * @param progress
+     */
+    public void setProgress(long progress){
+        if(mMediaPlayer!=null){
+            mMediaPlayer.setTime(progress);
+        }
+    }
+    public void setProgress(int progress){
+        if(mMediaPlayer!=null){
+            mMediaPlayer.setTime(progress);
+        }
+    }
+
+    /**
+     * 设置音量
+     * @param volue
+     */
+    public void setVolume(int volue){
+        if (mMediaPlayer!=null){
+            mMediaPlayer.setVolume(volue);
+        }
+    }
+
+    public int getVolume(){
+        if (mMediaPlayer!=null){
+            return mMediaPlayer.getVolume();
+        }
+        return -1;
+    }
+
+    /**
+     * 随机播放
+     */
+    public void randomModel(){
+        if (playList!=null){
+            playList.setCurrentMode(Constant.MODE_RANDOM);
+        }
+    }
+
+    /**
+     * 顺序播放
+     */
+    public void sequenceModel(){
+        if (playList!=null){
+            playList.setCurrentMode(Constant.MODE_NEXT);
+        }
+    }
+
+    /**
+     * 只播一首
+     */
+    public void singleModel(){
+        if (playList!=null){
+            playList.setCurrentMode(Constant.MODE_ONCE);
+        }
+    }
+
+    /**
+     * 单曲循环
+     */
+    public void loopModel(){
+        if (playList!=null){
+            playList.setCurrentMode(Constant.MODE_LOOP);
         }
     }
 
